@@ -1,40 +1,84 @@
-# ASA-weighted Vertical Derivative (AVD)
+# ASA-weighted Vertical Derivative (AVD) and IAVD
 
-This repository contains GNU Octave / MATLAB-compatible scripts used to generate the synthetic magnetic models and enhancement attributes presented in the paper:
+This repository contains GNU Octave / MATLAB-compatible scripts used to generate synthetic magnetic models and compute enhancement attributes for magnetic data interpretation.
 
-**“ASA-weighted Vertical Derivative (AVD) for Magnetic Anomaly Enhancement”**
+The implementation includes the ASA-weighted Vertical Derivative (AVD) and its extension, the Inclination of the ASA-weighted Vertical Derivative (IAVD).
+
+---
 
 ## Description
 
-The codes implement synthetic magnetic responses for simple geological models, including a buried body, a vertical dike, and a vertical contact. Enhancement attributes are computed based on the amplitude of the analytic signal (ASA), vertical derivatives, and related directional attributes.
+Magnetic data interpretation often relies on derivative-based attributes to enhance geological structures. However, conventional methods may suffer from instability, noise amplification, or poor edge definition.
 
-These scripts were used to generate the synthetic examples and figures presented in the associated publication.
+This repository provides implementations of the following methods:
+
+- **GZ** – Vertical derivative  
+- **ASA** – Analytic Signal Amplitude  
+- **AVD** – ASA-weighted Vertical Derivative  
+- **IAVD** – Inclination of the ASA-weighted Vertical Derivative  
+
+Synthetic magnetic models are generated for simple geological scenarios, including:
+
+- Buried body  
+- Vertical dike  
+- Vertical contact  
+
+These models are used to evaluate the behavior and stability of each method.
+
+---
+
+## Repository Structure
+
+
+```
+scripts/
+  compute_AVD.m
+  compute_IAVD.m
+  compute_all_attributes.m
+
+synthetic_models.m
+quick_test.m
+```
+
+
+---
 
 ## Requirements
 
 - GNU Octave (version 6.0 or later)  
   or  
-- MATLAB-compatible environment
+- MATLAB-compatible environment  
 
-## Files
+No additional toolboxes are required.
 
-- `synthetic_models.m`  
-  Generates synthetic magnetic profiles for body, dike, and contact models.
+---
 
-- `attributes_asa_avd.m`  
-  Computes ASA, vertical derivatives (AVD), ISA, Tilt Angle, and related enhancement attributes.
+## How to Run
 
-- `quick_test.m`  
-  Quick test script that reproduces representative synthetic models and enhancement results shown in the paper.
-
-## How to run
-
-1. Open GNU Octave.
-2. Navigate to the repository folder.
-3. Run the quick test script:
+1. Open GNU Octave or MATLAB  
+2. Navigate to the repository folder  
+3. Run:
 
 ```octave
 quick_test
+```
+
+This script will:
+
+- Generate synthetic magnetic data  
+- Compute GZ, ASA, AVD, and IAVD  
+- Display the results.
+
+
+## Reproducibility
+
+All synthetic models and attribute computations used in the study can be reproduced using the scripts provided in this repository.
+
+
+## Author
+
+Rafael Lima Dessart
+
 
 ## License
 
