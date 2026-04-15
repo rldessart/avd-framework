@@ -1,8 +1,8 @@
-# ASA-weighted Vertical Derivative (AVD) and IAVD
+# Magnetic Edge Detection Framework: ISA, p-Theta, and IAF
 
 This repository contains GNU Octave / MATLAB-compatible scripts used to generate synthetic magnetic models and compute enhancement attributes for magnetic data interpretation.
 
-The implementation includes the ASA-weighted Vertical Derivative (AVD) and its extension, the Inclination of the ASA-weighted Vertical Derivative (IAVD).
+The implementation includes the Inclination of the Source Analytic Signal (ISA), the p-Theta operator, and the proposed Inclination-Based Angular Fusion (IAF) method.
 
 ---
 
@@ -12,35 +12,32 @@ Magnetic data interpretation often relies on derivative-based attributes to enha
 
 This repository provides implementations of the following methods:
 
-- **GZ** – Vertical derivative  
-- **ASA** – Analytic Signal Amplitude  
-- **AVD** – ASA-weighted Vertical Derivative  
-- **IAVD** – Inclination of the ASA-weighted Vertical Derivative  
+- **ISA** – Inclination of the Source Analytic Signal  
+- **p-Theta** – Theta-based edge detection operator  
+- **IAF** – Inclination-Based Angular Fusion (proposed method)  
 
-Synthetic magnetic models are generated for simple geological scenarios, including:
+Synthetic magnetic models are generated for controlled scenarios, including:
 
-- Buried body  
-- Vertical dike  
-- Vertical contact  
+- Two-layer depth model (shallow and deep bodies)  
+- Noise-contaminated datasets (15% and 25%)  
 
-These models are used to evaluate the behavior and stability of each method.
+These models are used to evaluate the trade-off between resolution and stability in magnetic edge detection.
 
 ---
 
 ## Repository Structure
 
-
 ```
 scripts/
-  compute_AVD.m
-  compute_IAVD.m
-  compute_all_attributes.m
+compute_ISA.m
+compute_pTheta.m
+compute_IAF.m
+compute_all_attributes.m
 
 synthetic_models.m
-quick_test.m
-```
-
-
+figure1_script.m
+figure2_script.m
+figure3_script.m
 ---
 
 ## Requirements
@@ -60,19 +57,24 @@ No additional toolboxes are required.
 3. Run:
 
 ```octave
-quick_test
+figure1_script
+figure2_script
+figure3_script
+
 ```
 
-This script will:
+These scripts will:
 
-- Generate synthetic magnetic data  
-- Compute GZ, ASA, AVD, and IAVD  
-- Display the results.
+1. Generate synthetic magnetic data
+2. Compute ISA, p-Theta, and IAF attributes
+3. Reproduce the figures presented in the manuscript
 
 
 ## Reproducibility
 
-All synthetic models and attribute computations used in the study can be reproduced using the scripts provided in this repository.
+All synthetic models, noise simulations, and attribute computations presented in the study can be reproduced using the scripts provided in this repository.
+
+All processing steps, parameters, and noise levels are explicitly defined within the scripts.
 
 
 ## Author
