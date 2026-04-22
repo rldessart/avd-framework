@@ -6,17 +6,20 @@ addpath('attributes_asa_avd')
 
 clear; close all; clc;
 
-model_type = 2;   % 1=body, 2=dike, 3=contact
-
 disp('Running synthetic model...')
 
-% Generate synthetic model
-[T, dx] = synthetic_models(model_type);
+% Gerar modelo
+[T, dx] = synthetic_models(2);
 
-% Compute attributes
+figure
+imagesc(T)
+title('Synthetic Model')
+axis equal tight
+colorbar
+
+% Calcular atributos
 [GZ, ASA, AVD, IAVD] = compute_all_attributes(T, dx);
 
-% Display results
 figure
 
 subplot(2,2,1)
