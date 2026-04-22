@@ -18,7 +18,19 @@ disp('Running synthetic model...')
 
 % Display results
 figure
-subplot(2,2,1), imagesc(GZ), title('GZ'), axis equal tight
-subplot(2,2,2), imagesc(ASA), title('ASA'), axis equal tight
-subplot(2,2,3), imagesc(AVD), title('AVD'), axis equal tight
-subplot(2,2,4), imagesc(IAVD), title('IAVD'), axis equal tight
+
+subplot(2,2,1)
+imagesc(GZ)
+title('GZ'); axis equal tight; colorbar
+
+subplot(2,2,2)
+imagesc(ASA)
+title('ASA'); axis equal tight; colorbar
+
+subplot(2,2,3)
+imagesc(AVD)
+title('AVD'); axis equal tight; colorbar
+
+subplot(2,2,4)
+imagesc(IAVD)
+title('IAVD'); axis equal tight; colorbar
