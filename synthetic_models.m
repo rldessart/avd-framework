@@ -23,8 +23,9 @@ function [T, dx] = synthetic_models(model_type)
       error('Invalid model type')
   end
 
-  G = gaussian_kernel(5, 1);
+  G = gaussian_kernel(15, 5);
   T = conv2(T, G, 'same');
+  T = conv2(T, G, 'same'); % reforça suavização
 
 end
 
