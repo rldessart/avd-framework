@@ -1,7 +1,7 @@
 function [GZ, ASA, AVD, IAVD] = compute_all_attributes(T, dx)
 
-  % Derivatives
-  [dTdx, dTdz] = gradient(T, dx);
+  % Derivatives (CORRETO)
+  [dTdz, dTdx] = gradient(T, dx);
 
   % Vertical derivative
   GZ = dTdz;
