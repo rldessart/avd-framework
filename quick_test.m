@@ -2,7 +2,7 @@
 % This script reproduces the synthetic models and computes the main
 % magnetic attributes used in the study: GZ, ASA, AVD, and IAVD.
 
-addpath(fullfile('..','scripts'))
+addpath('attributes_asa_avd')
 
 clear; close all; clc;
 
