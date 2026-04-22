@@ -1,1 +1,19 @@
+function [GZ, ASA, AVD, IAVD] = compute_all_attributes(T, dx)
 
+  % Derivatives
+  [dTdz, dTdx] = gradient(T, dx);
+
+  % Vertical derivative
+  GZ = dTdz;
+
+  % Analytic Signal Amplitude
+  ASA = sqrt(dTdx.^2 + dTdz.^2);
+
+  % AVD
+  AVD = ASA .* dTdz;
+
+  % IAVD
+  epsilon = 1e-6;
+  IAVD = atan(AVD ./ (ASA + epsilon));
+
+end
