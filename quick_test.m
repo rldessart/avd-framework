@@ -27,7 +27,7 @@ colorbar
 % ============================================
 % ATRIBUTOS
 % ============================================
-[GZ, ASA, AVD, IAVD] = compute_all_attributes(T, dx);
+[GZ, ASA, AVD] = compute_all_attributes(T, dx);
 
 % ============================================
 % NORMALIZAÇÃO (IMPORTANTE para visual)
@@ -35,27 +35,20 @@ colorbar
 GZ  = GZ  / max(abs(GZ(:)));
 ASA = ASA / max(ASA(:));
 AVD = AVD / max(abs(AVD(:)));
-IAVD = IAVD / max(abs(IAVD(:)));
 
 % ============================================
 % PLOT FINAL
 % ============================================
 figure
 
-subplot(2,2,1)
+subplot(1,3,1)
 imagesc(GZ)
 title('GZ'); axis equal tight; colorbar
 
-subplot(2,2,2)
+subplot(1,3,2)
 imagesc(ASA)
 title('ASA'); axis equal tight; colorbar
 
-subplot(2,2,3)
+subplot(1,3,3)
 imagesc(AVD)
 title('AVD'); axis equal tight; colorbar
-
-subplot(2,2,4)
-imagesc(IAVD)
-title('IAVD'); axis equal tight; colorbar
-imagesc(IAVD)
-title('IAVD'); axis equal tight; colorbar
