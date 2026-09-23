@@ -1,29 +1,27 @@
-# ASA-weighted Vertical Derivative (AVD) and IAVD
+# ASA-weighted Vertical Derivative (AVD)
 
 This repository contains GNU Octave / MATLAB-compatible scripts used to generate synthetic magnetic models and compute enhancement attributes for magnetic data interpretation.
 
-The implementation includes the ASA-weighted Vertical Derivative (AVD) and its extension, the Inclination of the ASA-weighted Vertical Derivative (IAVD).
+The implementation includes the ASA-weighted Vertical Derivative (AVD).
 
 ---
 
 ## Description
 
-Magnetic data interpretation often relies on derivative-based attributes to enhance geological structures. However, conventional methods may suffer from instability, noise amplification, or poor edge definition.
+The ASA-weighted Vertical Derivative (AVD) is a dimensionless magnetic enhancement attribute defined as the ratio between the vertical derivative (GZ) and the analytic signal amplitude (ASA).
 
 This repository provides implementations of the following methods:
 
 - **GZ** – Vertical derivative  
 - **ASA** – Analytic Signal Amplitude  
 - **AVD** – ASA-weighted Vertical Derivative  
-- **IAVD** – Inclination of the ASA-weighted Vertical Derivative  
 
-Synthetic magnetic models are generated for simple geological scenarios, including:
+Synthetic magnetic models are provided for:
 
-- Buried body  
-- Vertical dike  
-- Vertical contact  
+- Compact body
+- Dike
+- Magnetic contact  
 
-These models are used to evaluate the behavior and stability of each method.
 
 ---
 
@@ -32,7 +30,6 @@ These models are used to evaluate the behavior and stability of each method.
 ```
 scripts/
 compute_AVD.m
-compute_IAVD.m
 compute_all_attributes.m
 
 synthetic_models.m
