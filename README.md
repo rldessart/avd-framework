@@ -61,7 +61,7 @@ quick_test
 This script will:
 
 Generate synthetic magnetic data
-Compute GZ, ASA, AVD, and IAVD
+Compute GZ, ASA and AVD
 Display the results.
 
 **Reproducibility**
@@ -74,4 +74,4 @@ Rafael Lima Dessart
 
 **License**
 
-This code is provided for academic and research purposes. Users are free to use, modify, and distribute the scripts, provided that proper citation of the associated publication is given.associated publication is given.
+This code is provided for academic and research purposes. Users are free to use, modify, and distribute the scripts, provided that proper citation of the associated publication is given.
